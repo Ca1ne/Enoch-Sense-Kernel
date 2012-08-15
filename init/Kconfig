@@ -902,16 +902,19 @@ source "usr/Kconfig"
 endif
 
 choice
-	prompt "Optimization level"
-	default CC_OPTIMIZE_DEFAULT
+  prompt "Optimization level"
+  default CC_OPTIMIZE_DEFAULT
 
-	config CC_OPTIMIZE_FOR_SIZE
-		bool "Use -Os"
-	config CC_OPTIMIZE_DEFAULT
-		bool "Use -O2"
-	config CC_OPTIMIZE_ALOT
-		bool "Use -O3"
-end choice	
+config CC_OPTIMIZE_FOR_SIZE
+	bool "Use -Os"
+
+config CC_OPTIMIZE_DEFAULT
+	bool "Use -O2"
+
+config CC_OPTIMIZE_ALOT
+	bool "Use -O3"
+
+endchoice	
 
 config SYSCTL
 	bool
