@@ -2476,9 +2476,9 @@ static void headset_init(void)
 		for (i = 0; i < 5; i++) {
 			rc = pm8xxx_gpio_config(headset_rx_xc[i].gpio,
 						&headset_rx_xc[i].config);
-			if (rc)
+			/*if (rc)
 				pr_info("[HS_BOARD] %s: Config ERROR: GPIO=%u, rc=%d\n",
-					__func__, headset_rx[i].gpio, rc);
+					__func__, headset_rx[i].gpio, rc);*/
 		}
 	}
 }

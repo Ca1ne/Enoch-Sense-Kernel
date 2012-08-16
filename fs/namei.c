@@ -2708,7 +2708,7 @@ int vfs_unlink(struct inode *dir, struct dentry *dentry)
 static long do_unlinkat(int dfd, const char __user *pathname)
 {
 	int error;
-	har *name = 0;
+	char *name = 0;
 	struct dentry *dentry;
 	struct nameidata nd;
 	struct inode *inode = NULL;
